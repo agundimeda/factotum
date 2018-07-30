@@ -1,0 +1,6 @@
+---
+- hosts: head 
+  remote_user: root
+  tasks:
+    - name: Update
+      yum: name=* state=latest
