@@ -8,4 +8,6 @@
     - Install pip2 libraries
     - Install kernelspec
     - SSL?
+    - SlurmSpawner
+    - WrapSpawner?
     - Upload config
