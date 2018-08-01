@@ -5,10 +5,10 @@
     - name: OpenHPC
       yum:name=http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
 
-    - name: Update
+    - name: Yum Update
       yum: name=*,epel-release state=latest
 
-    - name: Packages
+    - name: Yum Packages
       yum: name={{item}} state=latest
       with_items:
         - ohpc-base
@@ -30,7 +30,9 @@
         - stress
         - python
         - python3
-        - R
+        - python2-pip
+        - python34-pip
+        - r-base
         - octave
         - svn
         - tmux
@@ -51,3 +53,7 @@
         - mariadb-devel
         - yum-utils
         - oddjob-mkhomedir
+        - munge
+        - munge-libs
+        - munge-devel
+        - rng-tools

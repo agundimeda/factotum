@@ -1,0 +1,6 @@
+---
+- hosts: compute
+  remote_user: root
+  tasks:
+    - name: Add Users for Munge & Slurm
+      shell: sh /root/factotum/files/users.sh

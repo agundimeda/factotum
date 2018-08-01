@@ -1,0 +1,9 @@
+---
+- hosts: head
+  remote_user: root
+  tasks:
+    - name: Install Slurm
+    - name: Create Munge Key
+    - name: Upload Munge key
+    - name: Upload Slurm Config
+    - name: Upload GRES Config

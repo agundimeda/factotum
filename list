@@ -1,0 +1,18 @@
+BOOTSTRAP
+
+users
+packages
+filesystem?
+SSL
+LDAP
+slurm
+xdmod
+jupyterhub
+services
+
+MAINTENANCE
+
+
+update single node
+update head node
+
