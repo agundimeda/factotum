@@ -1,3 +1,3 @@
-# factotum
-## Ansible Playbooks for the installation & maintenance of a slurm based cluster at MGHPCC hosted my UMass Amherst RC
+# Factotum
+### Ansible playbooks for the installation & maintenance of a Slurm based cluster at MGHPCC hosted by UMass Amherst RC
 
