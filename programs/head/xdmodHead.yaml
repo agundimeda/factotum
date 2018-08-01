@@ -1,0 +1,10 @@
+---
+- hosts:
+  remote_user:
+  tasks:
+    - name: Update Yum
+    - name: Install XDmod dependencies
+    - name: Install XDmod
+    - name: Start SQL Server
+    - name: xdmod-setup
+    - name: xdmod-slurm-helper
