@@ -8,12 +8,6 @@
     - name: Update
       yum: name=*,epel-release state=latest
 
-    - name: SELinux
-      replace:
-        path:/etc/selinux/config
-        regexp:
-        replace:
-
     - name: Packages
       yum: name={{item}} state=latest
       with_items:
