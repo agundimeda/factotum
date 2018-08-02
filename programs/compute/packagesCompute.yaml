@@ -20,8 +20,8 @@
         - nano
         - git
         - autogen
-        - autoconf
-        - automake
+        - autoconf-ohpc
+        - automake-ohpc
         - bzip
         - gzip
         - tar
@@ -43,7 +43,7 @@
         - rsync
         - yum-utils
         - oddjob-mkhomedir
-        - munge
-        - munge-libs
-        - munge-devel
+        - munge-ohpc
+        - munge-libs-ohpc
+        - munge-devel-ohpc
         - rng-tools
