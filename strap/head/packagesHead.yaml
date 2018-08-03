@@ -11,6 +11,7 @@
     - name: Yum Packages
       yum:
         name:
+          - git
           - ohpc-base
           - nmap 
           - gcc
@@ -44,10 +45,12 @@
           - rsync
           - yum-utils
           - oddjob-mkhomedir
-          - munge-ohpc
-          - munge-libs-ohpc
-          - munge-devel-ohpc
           - rng-tools
           - ufw
         state: latest
+
+    - name: Clone Git Repo
+      git:
+        repo: https://github.com/agundimeda/factotum
+        dest: /root
   
