@@ -17,8 +17,8 @@
           - emacs
           - nano
           - autogen
-          - autoconf-ohpc
-          - automake-ohpc
+            #          - autoconf-ohpc
+            #          - automake-ohpc
           - gzip
           - tar
           - unzip
@@ -34,7 +34,7 @@
           - wget
           - curl
           - anaconda-core
-          - singularity-ohpc
+            #          - singularity-ohpc
           - mpich
           - cmake
           - gcc-gfortran
@@ -43,8 +43,8 @@
           - nss-pam-ldapd
           - rsync
           - oddjob-mkhomedir
-          - munge-ohpc
-          - munge-libs-ohpc
-          - munge-devel-ohpc
+            #          - munge-ohpc
+            #          - munge-libs-ohpc
+            #          - munge-devel-ohpc
           - rng-tools
         state: latest
