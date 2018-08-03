@@ -3,47 +3,42 @@
   remote_user: root
   tasks:
     - name: OpenHPC
-      yum:name=http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
+      yum: name=http://build.openhpc.community/OpenHPC:/1.3/CentOS_7/x86_64/ohpc-release-1.3-1.el7.x86_64.rpm
 
     - name: Yum Update
       yum: name=*,epel-release state=latest
 
     - name: Yum Packages
-      yum: name={{item}} state=latest
-      with_items:
-        - ohpc-base
-        - nmap 
-        - gcc
-        - vim
-        - g++
-        - emacs
-        - nano
-        - git
-        - autogen
-        - autoconf-ohpc
-        - automake-ohpc
-        - bzip
-        - gzip
-        - tar
-        - unzip
-        - environment-modules
-        - stress
-        - svn
-        - tmux
-        - zsh
-        - wget
-        - curl
-        - mpich
-        - cmake
-        - gcc-gfortran
-        - ipmitool
-        - maven
-        - openldap-clients
-        - nss-pam-ldapd
-        - rsync
-        - yum-utils
-        - oddjob-mkhomedir
-        - munge-ohpc
-        - munge-libs-ohpc
-        - munge-devel-ohpc
-        - rng-tools
+      yum:
+        name:
+          - ohpc-base
+          - nmap 
+          - gcc
+          - vim
+          - emacs
+          - nano
+          - git
+          - autogen
+          - autoconf-ohpc
+          - automake-ohpc
+          - gzip
+          - tar
+          - unzip
+          - stress
+          - svn
+          - tmux
+          - zsh
+          - wget
+          - curl
+          - cmake
+          - gcc-gfortran
+          - maven
+          - openldap-clients
+          - nss-pam-ldapd
+          - rsync
+          - yum-utils
+          - oddjob-mkhomedir
+          - munge-ohpc
+          - munge-libs-ohpc
+          - munge-devel-ohpc
+        state: latest
