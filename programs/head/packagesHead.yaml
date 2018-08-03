@@ -17,7 +17,6 @@
           - vim
           - emacs
           - nano
-          - git
           - autogen
           - autoconf-ohpc
           - automake-ohpc
@@ -25,7 +24,6 @@
           - tar
           - unzip
           - stress
-          - python
           - python34
           - python2-pip
           - python34-pip
@@ -52,3 +50,4 @@
           - munge-libs-ohpc
           - munge-devel-ohpc
           - rng-tools
+        state: latest
