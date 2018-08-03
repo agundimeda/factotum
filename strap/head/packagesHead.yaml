@@ -52,5 +52,6 @@
     - name: Clone Git Repo
       git:
         repo: https://github.com/agundimeda/factotum
-        dest: /root
+        dest: /root/factotum
+        force: yes
   
