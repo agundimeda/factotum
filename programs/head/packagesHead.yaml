@@ -38,7 +38,6 @@
           - singularity-ohpc
           - cmake
           - gcc-gfortran
-          - ipmitool
           - maven
           - openldap-clients
           - nss-pam-ldapd
@@ -49,5 +48,6 @@
           - munge-libs-ohpc
           - munge-devel-ohpc
           - rng-tools
+          - ufw
         state: latest
   

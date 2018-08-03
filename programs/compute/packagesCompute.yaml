@@ -25,20 +25,15 @@
           - tar
           - unzip
           - stress
-          - svn
           - tmux
           - zsh
           - wget
           - curl
           - cmake
-          - gcc-gfortran
-          - maven
-          - openldap-clients
-          - nss-pam-ldapd
           - rsync
           - yum-utils
-          - oddjob-mkhomedir
           - munge-ohpc
           - munge-libs-ohpc
           - munge-devel-ohpc
+          - ufw
         state: latest

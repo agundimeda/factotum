@@ -1,8 +1,0 @@
----
- - hosts: head
-   remote_user: root
-   tasks: 
-     - name: Update & EPEL
-       yum: name=*,epel-release state=latest
-     
-     - name: 
