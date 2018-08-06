@@ -50,6 +50,13 @@
           - bokeh
           - scrapy
         executable: pip2
+
+    - name: Install Spawners
+      pip:
+        name:
+          - batchspawner
+          - git+https://github.com/jupyterhub/wrapspawner
+        executable: pip3
     
     - name: Install R kernelspec
       shell: echo "library.install(c('${item}')"| R --slave --no-save --no-restore-history
@@ -57,7 +64,10 @@
 
     - SSL?
     - SP-init
-    - SlurmSpawner
-    - WrapSpawner?
-    - Upload config
+
+    - name: Upload config
+      copy:
+        src: /root/factotum/files/jupyterhub-config.py
+        dest: /etc/jupyterhub/
+
     - Daemon?

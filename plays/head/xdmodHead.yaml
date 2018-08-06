@@ -1,10 +1,20 @@
 ---
-- hosts:
-  remote_user:
+- hosts: head
+  remote_user: root
   tasks:
-    - name: Update Yum
-    - name: Install XDmod dependencies
+    - name: Yum Update
+      yum: name=* state=latest
+
     - name: Install XDmod
+      yum: name=https://github.com/ubccr/xdmod/releases/download/v7.5.1/xdmod-7.5.1-1.0.el7.noarch.rpm
+
     - name: Start SQL Server
-    - name: xdmod-setup
-    - name: xdmod-slurm-helper
+      service:
+        name: mariadb
+        state: restarted
+
+    - name: Setup
+      shell: xdmod-setup
+   
+    - name: Shredder
+      shell: xdmod-slurm-helper -v -r *resource*
