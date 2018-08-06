@@ -15,7 +15,7 @@
         state: latest
 
     - name: Create Munge Key
-      shell: sh /root/factotum/files/mungeHead.sh
+      shell: sh /root/factotum/scripts/mungeHead.sh
 
     - name: Upload Slurm Config
       copy:
@@ -33,4 +33,4 @@
         dest: /etc/slurm/
 
     - name: Permissions & Files
-      shell: sh /root/factotum/files/slurmHead.sh
+      shell: sh /root/factotum/scripts/slurmHead.sh

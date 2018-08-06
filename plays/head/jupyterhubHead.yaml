@@ -1,0 +1,63 @@
+---
+- hosts: head
+  remote_user: root
+  tasks:
+    - name: Install Yum packages
+      yum: name=*,python-pip,python34-pip,gnuplot,octave,R state=latest
+
+    - name: configurable-http-proxy
+      shell: npm install -g configurable-http-proxy
+
+    - name: Install pip3 libraries
+      pip:
+        name:
+          - numpy
+          - scipy
+          - pandas
+          - matplotlib
+          - sympy
+          - nltk
+          - tensorflow
+          - networkx
+          - keras
+          - scikit-learn
+          - pytorch
+          - theano
+          - seaborn
+          - bokeh
+          - scrapy
+          - jupyterhub
+          - jupyterlab
+          - octave_kernel
+        executable: pip3
+
+    - name: Install pip2 libraries
+      pip:
+        name:
+          - numpy
+          - scipy
+          - pandas
+          - matplotlib
+          - sympy
+          - nltk
+          - tensorflow
+          - networkx
+          - keras
+          - scikit-learn
+          - pytorch
+          - theano
+          - seaborn
+          - bokeh
+          - scrapy
+        executable: pip2
+    
+    - name: Install R kernelspec
+      shell: echo "library.install(c('${item}')"| R --slave --no-save --no-restore-history
+      with_items:
+
+    - SSL?
+    - SP-init
+    - SlurmSpawner
+    - WrapSpawner?
+    - Upload config
+    - Daemon?

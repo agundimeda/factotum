@@ -20,7 +20,7 @@
         dest: /etc/munge/
 
     - name: Permissions Munge
-      shell: sh /root/factotum/files/mungeCompute.sh 
+      shell: sh /root/factotum/scripts/mungeCompute.sh 
 
     - name: Upload Slurm Config
       copy:
@@ -38,4 +38,4 @@
         dest: /etc/slurm/
 
     - name: Permissions & Files
-      shell: sh /root/factotum/files/slurmCompute.sh
+      shell: sh /root/factotum/scripts/slurmCompute.sh
