@@ -1,5 +1,4 @@
 # Factotum
-### Ansible playbooks & scripts for the installation & maintenance of a Slurm based cluster at MGHPCC hosted by UMass Amherst RC
 
 After installing CentOS minimal on all machines and configuring the network appropriately:
 
