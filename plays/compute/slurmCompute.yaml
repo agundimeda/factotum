@@ -3,7 +3,7 @@
   remote_user: root
   tasks:
     - name: Create Users & Groups
-      shell: sh /root/factotum/files/users.sh
+      shell: sh /root/factotum/scripts/users.sh
 
     - name: Install Slurm
       yum: 
