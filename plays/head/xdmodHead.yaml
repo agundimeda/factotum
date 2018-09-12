@@ -19,4 +19,4 @@
     - name: Shredder
       shell: xdmod-slurm-helper -v -r *resource*
 
-    // Test playbook and decide on resource name, or write bash wrapper
+  # Test playbook and decide on resource name, or write bash wrapper
