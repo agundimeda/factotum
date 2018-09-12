@@ -43,6 +43,7 @@
           - oddjob-mkhomedir
           - rng-tools
           - ufw
+          - htop  
         state: latest
 
     - name: Clone Git Repo
