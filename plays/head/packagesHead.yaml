@@ -43,7 +43,8 @@
           - oddjob-mkhomedir
           - rng-tools
           - ufw
-          - htop  
+          - htop
+          - mariadb
         state: latest
 
     - name: Clone Git Repo

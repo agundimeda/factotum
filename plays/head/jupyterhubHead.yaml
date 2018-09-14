@@ -70,4 +70,4 @@
         src: /root/factotum/files/jupyterhub-config.py
         dest: /etc/jupyterhub/
 
-    - Daemon?
+          # - Daemon?
