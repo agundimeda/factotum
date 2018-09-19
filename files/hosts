@@ -1,0 +1,15 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+10.0.0.1 head
+10.0.0.2 cpu1
+10.0.0.3 cpu2
+10.0.0.4 cpu3
+10.0.0.5 cpu4
+10.0.0.6 cpu5
+10.0.0.7 cpu6
+10.0.0.8 cpu7
+10.0.0.9 cpu8
+
+10.0.0.10 gpu1
+10.0.0.11 gpu2
