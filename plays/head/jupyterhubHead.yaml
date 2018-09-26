@@ -67,7 +67,7 @@
 
     - name: Upload config
       copy:
-        src: /root/factotum/files/jupyterhub-config.py
+        src: /root/factotum/files/jupyterhub_config.py
         dest: /etc/jupyterhub/
 
           # - Daemon?

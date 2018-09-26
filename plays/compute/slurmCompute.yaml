@@ -27,15 +27,5 @@
         src: /root/factotum/files/slurm.conf
         dest: /etc/slurm/
 
-    - name: Upload GRES Config
-      copy:
-        src: /root/factotum/files/gres.conf
-        dest: /etc/slurm/
-    
-    - name: Upload CGROUP Config
-      copy:
-        src: /root/factotum/files/cgroup.conf
-        dest: /etc/slurm/
-
     - name: Permissions & Files
       shell: sh /root/factotum/scripts/slurmCompute.sh

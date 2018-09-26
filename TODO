@@ -1,5 +1,34 @@
 Filesystem
-SP init idp auth & creation of users
+	Lustre on SSDs for Scratch
+	NESE
+Website
+	ssh key management
+	filesystem browser
+	xdmod
+	jupyter interface
+Auth
+	Shibboleth
+	Web users
+	Real users
+
+Jupyterhub config
+	slurmspawner in config
+	wrapspawner?
+	daemon
+
+slurm
+	slurm.conf (all)
+	cgroup & gres (head)
+	playbooks for daemons
+
+xdmod
+	access to slurmdb via shredder
+	coordination with website
+
+firewall & networking
+	static assignment (head)
+	dhcpd.conf (head)
+	hosts (all)
+
 making into a role
-firewall
 create management plays
