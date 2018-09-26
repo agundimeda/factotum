@@ -1,11 +1,12 @@
 Filesystem
-	Lustre on SSDs for Scratch
+	Lustre on SSDs for Scratch (auto symlink)
 	NESE
 Website
 	ssh key management
-	filesystem browser
+	filesystem browser?
 	xdmod
 	jupyter interface
+	webserver & daemon
 Auth
 	Shibboleth
 	Web users
@@ -19,7 +20,7 @@ Jupyterhub config
 slurm
 	slurm.conf (all)
 	cgroup & gres (head)
-	playbooks for daemons
+	daemons
 
 xdmod
 	access to slurmdb via shredder
@@ -30,5 +31,9 @@ firewall & networking
 	dhcpd.conf (head)
 	hosts (all)
 
-making into a role
-create management plays
+management plays
+	update single compute
+	update all compute
+	update head
+	restart specific services
+	filesystem allocations
