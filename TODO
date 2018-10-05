@@ -1,5 +1,5 @@
 Filesystem
-	Lustre on SSDs for Scratch (auto symlink)
+	ZFS/Lustre on SSDs for Scratch (auto symlink)
 	NESE
 Website
 	ssh key management
