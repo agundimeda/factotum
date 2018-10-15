@@ -1,21 +1,16 @@
+THIS SYSTEM IS NOW INTENDED TO BE MERGED WITH GYPSUM & PIKES
+
 Filesystem
 	ZFS/Lustre on SSDs for Scratch (auto symlink)
+	Old resources
 	NESE
-Website
+
+OpenOnDemand
+	config/branding
+	auth
 	ssh key management
-	filesystem browser?
 	xdmod
 	jupyter interface
-	webserver & daemon
-Auth
-	Shibboleth
-	Web users
-	Real users
-
-Jupyterhub config
-	slurmspawner in config
-	wrapspawner?
-	daemon
 
 slurm
 	slurm.conf (all)
