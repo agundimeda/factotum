@@ -2,6 +2,7 @@
 - hosts: head
   remote_user: root
   tasks:
+
     - name: Create Users & Groups
       shell: sh /root/factotum/scripts/users.sh
     
@@ -19,18 +20,38 @@
 
     - name: Upload Slurm Config
       copy:
-        src: /root/factotum/files/slurm.conf
+        src: /root/factotum/files/slurm/slurm.conf
         dest: /etc/slurm/
 
     - name: Upload GRES Config
       copy:
-        src: /root/factotum/files/gres.conf
+        src: /root/factotum/files/slurm/gres.conf
         dest: /etc/slurm/
     
     - name: Upload CGROUP Config
       copy:
-        src: /root/factotum/files/cgroup.conf
+        src: /root/factotum/files/slurm/cgroup.conf
         dest: /etc/slurm/
 
     - name: Permissions & Files
       shell: sh /root/factotum/scripts/slurmHead.sh
+
+    - name: Enable service munge
+      service:
+        name: munge
+        enabled: yes
+    
+    - name: Start service munge
+      service:
+        name: munge
+        state: started
+
+    - name: Enable service slurmctld
+      service:
+        name: slurmctld
+        enabled: yes
+    
+    - name: Start service slurmctld
+      service:
+        name: slurmctld
+        state: started

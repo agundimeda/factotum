@@ -2,6 +2,8 @@
 - hosts: compute
   remote_user: root
   tasks:
+    - name: Create Users & Groups
+      shell: sh /root/factotum/scripts/users.sh
 
     - name: Install Slurm
       yum: 
@@ -24,32 +26,6 @@
       copy:
         src: /root/factotum/files/slurm/slurm.conf
         dest: /etc/slurm/
-    
-    - name: Upload Cgroup Config
-      copy:
-        src: /root/factotum/files/slurm/cgroup.conf
-        dest: /etc/slurm/
 
     - name: Permissions & Files
       shell: sh /root/factotum/scripts/slurmCompute.sh
-
-
-    - name: Enable service munge
-      service:
-         name: munge
-         enabled: yes
-
-    - name: Start service munge
-      service:
-         name: munge
-         state: started
-
-    - name: Enable service slurmd
-      service:
-         name: slurmd
-         enabled: yes
-
-    - name: Start service slurmd
-      service:
-         name: slurmd
-         state: started

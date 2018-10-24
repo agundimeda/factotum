@@ -33,6 +33,7 @@
           - cmake
           - rsync
           - ufw
+          - ntp
         state: latest
 
     - name: Clone Git Repo
@@ -40,3 +41,25 @@
         repo: https://github.com/agundimeda/factotum
         dest: /root/factotum
         force: yes
+
+    - name: firewalld add ntp rule
+      firewalld:
+        service: ntp
+        permanent: true
+        state: enabled
+
+    - name: Upload ntp.conf
+      copy:
+        src: /root/factotum/files/ntp.conf
+        dest: /etc/ntp.conf
+
+    - name: Enable service ntpd
+      service:
+        name: ntpd
+        enabled: yes
+
+    - name: start ntpd
+      service:
+        name: ntpd
+        state: started
+
