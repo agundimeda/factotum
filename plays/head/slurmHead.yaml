@@ -3,8 +3,8 @@
   remote_user: root
   tasks:
 
-    - name: Create Users & Groups
-      shell: sh /root/factotum/scripts/users.sh
+     #- name: Create Users & Groups
+     #- shell: sh /root/factotum/scripts/users.sh
     
     - name: Install Slurm & Munge
       yum: 
