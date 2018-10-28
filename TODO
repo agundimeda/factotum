@@ -1,7 +1,5 @@
 THIS SYSTEM IS NOW INTENDED TO BE MERGED WITH GYPSUM & PIKES
 
-TEST
-
 Filesystem
 	ZFS/Lustre on SSDs for Scratch (auto symlink)
 	Old resources
