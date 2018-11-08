@@ -2,14 +2,16 @@
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 
 10.0.0.1 head
-10.0.0.2 cpu1
-10.0.0.3 cpu2
-10.0.0.4 cpu3
-10.0.0.5 cpu4
-10.0.0.6 cpu5
-10.0.0.7 cpu6
-10.0.0.8 cpu7
-10.0.0.9 cpu8
+10.0.0.2 switch
 
-10.0.0.10 gpu1
-10.0.0.11 gpu2
+10.0.0.11 cpu1
+10.0.0.12 cpu2
+10.0.0.13 cpu3
+10.0.0.14 cpu4
+10.0.0.15 cpu5
+10.0.0.16 cpu6
+10.0.0.17 cpu7
+10.0.0.18 cpu8
+
+10.0.0.51 gpu1
+10.0.0.52 gpu2
