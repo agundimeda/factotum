@@ -26,6 +26,7 @@
           - unzip
           - stress
           - python34
+          - mariadb-server
           - svn
           - tmux
           - zsh
@@ -47,9 +48,53 @@
           - mariadb
         state: latest
 
-    - name: Clone Git Repo
-      git:
-        repo: https://github.com/agundimeda/factotum
-        dest: /root/factotum
-        force: yes
+    - name: firewalld add ntp rule
+      firewalld:
+        service: ntp
+        permanent: true
+        state: enabled
+
+    - name: Upload ntp.conf
+      copy:
+        src: /root/factotum/files/ntp.conf
+        dest: /etc/ntp.conf
+
+    - name: Enable service ntpd
+      service:
+        name: ntpd
+        enabled: yes
+
+    - name: start ntpd
+      service:
+        name: ntpd
+        state: started
+
+    - name: Upload Hosts file
+      copy:
+        src: /root/factotum/files/etchosts
+        dest: /etc/hosts
+
+    - name: Upload ssh knownhosts
+      copy:
+        src: /root/factotum/files/sshknownhosts
+        dest: /root/.ssh/known_hosts
+
+    - name: Upload ssh authorized_keys
+      copy:
+        src: /root/factotum/files/sshauthorizedkeys
+        dest: /root/.ssh/authorized_keys
+
+    - name: Upload ssh private key
+      copy:
+        src: /root/factotum/files/sshprivatekey
+        dest: /root/.ssh/id_rsa
+        mode: 0400
+
+
+#I don't think this is necessary since we have to clone the git to run this playbook
+    #- name: Clone Git Repo
+    #  git:
+    #    repo: https://github.com/agundimeda/factotum
+    #    dest: /root/factotum
+    #    force: yes
   

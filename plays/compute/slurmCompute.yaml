@@ -14,8 +14,9 @@
 
     - name: Upload Munge key
       copy:
-        src: /etc/munge/munge.key
+        src: /root/factotum/files/munge.key
         dest: /etc/munge/
+        mode: 0400
 
     - name: Permissions Munge
       shell: sh /root/factotum/scripts/mungeCompute.sh 
