@@ -36,6 +36,12 @@
     - name: Permissions & Files
       shell: sh /root/factotum/scripts/slurmHead.sh
 
+    - name: Firewall rules
+      firewalld:
+        source: 10.0.0.0/24
+        zone: public
+        state: enabled
+
     - name: Enable service munge
       service:
         name: munge
