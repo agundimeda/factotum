@@ -59,3 +59,9 @@
       service:
          name: slurmd
          state: started
+
+    - name: restart slurmd
+      systemd:
+        state: restarted
+        daemon_reload: yes
+        name: slurmd
