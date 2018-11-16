@@ -11,7 +11,7 @@
     - name: Yum Packages
       yum:
         name:
-          - nfs
+          - nfs-utils
           - git
           - ohpc-base
           - nmap 
