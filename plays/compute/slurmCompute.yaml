@@ -16,6 +16,8 @@
       copy:
         src: /root/factotum/files/munge.key
         dest: /etc/munge/
+        group: munge
+        owner: munge
         mode: 0400
 
     - name: Permissions Munge

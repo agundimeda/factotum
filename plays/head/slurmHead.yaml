@@ -15,8 +15,16 @@
           - ohpc-slurm-server
         state: latest
 
-    - name: Create Munge Key
-      shell: sh /root/factotum/scripts/mungeHead.sh
+    #- name: Create Munge Key
+    #  shell: sh /root/factotum/scripts/mungeHead.sh
+    
+    - name: copy munge.key
+      copy:
+        src: /root/factotum/files/munge.key
+        dest: /etc/munge/munge.key 
+        owner: munge
+        group: munge
+        mode: 0400
 
     - name: Upload Slurm Config
       copy:
@@ -73,3 +81,9 @@
         state: restarted
         daemon_reload: yes
         name: slurmctld
+        
+    - name: restart munge
+      systemd:
+        state: restarted
+        daemon_reload: yes
+        name: munge
