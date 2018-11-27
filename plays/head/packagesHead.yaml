@@ -11,6 +11,7 @@
     - name: Yum Packages
       yum:
         name:
+          - avahi
           - nfs-utils
           - git
           - ohpc-base
