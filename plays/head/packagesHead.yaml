@@ -86,12 +86,6 @@
         src: /root/factotum/files/sshauthorizedkeys
         dest: /root/.ssh/authorized_keys
 
-    - name: Upload ssh private key
-      copy:
-        src: /root/factotum/files/sshprivatekey
-        dest: /root/.ssh/id_rsa
-        mode: 0400
-
 
 #I don't think this is necessary since we have to clone the git to run this playbook
     #- name: Clone Git Repo
