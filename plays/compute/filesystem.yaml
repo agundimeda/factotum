@@ -1,0 +1,14 @@
+---
+- hosts: compute 
+  remote_user: root
+  tasks:
+    - name: make mount point
+      file: path=/mnt/headzfs state=directory
+
+    - name: upload headzfs to etc/fstab
+      lineinfile:
+        path: /etc/fstab
+        line: '10.0.0.1:/headzfs    /mnt/headzfs/    nfs    defaults    0 0'
+    
+    - name: reload /etc/fstab
+      shell: mount -a
