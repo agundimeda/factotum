@@ -85,4 +85,6 @@
         dest: /root/.ssh/id_rsa
         mode: 0400
 
+    - name: Set modules location
+      shell: sh /root/factotum/scripts/setEnvironmentModulesLocation.sh
 

@@ -85,6 +85,9 @@
       copy:
         src: /root/factotum/files/sshauthorizedkeys
         dest: /root/.ssh/authorized_keys
+     
+    - name: Set modules location
+      shell: sh /root/factotum/scripts/setEnvironmentModulesLocation.sh
 
 
 #I don't think this is necessary since we have to clone the git to run this playbook
